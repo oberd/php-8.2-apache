@@ -37,7 +37,7 @@ RUN a2enmod rewrite setenvif \
 COPY apache/sites/*.conf /etc/apache2/sites-available/
 
 #composer install
-COPY --from=composer:2.1.9 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.6.3 /usr/bin/composer /usr/bin/composer
 
 #adds "dev" stage command to enable xdebug
 COPY commands/enable-xdebug /usr/local/bin/
