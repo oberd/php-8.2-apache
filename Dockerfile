@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     mariadb-client \
     zip \
     unzip \
+    dnsutils \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pecl install zip pcov
